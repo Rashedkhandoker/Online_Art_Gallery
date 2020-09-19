@@ -15,6 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Profile import views as ProfileView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('AddUser/', ProfileView.showUser), #User Show er jonno
+    path('InsertUsers/', ProfileView.insertUser) #User insert er table dekhabe
+
 ]
