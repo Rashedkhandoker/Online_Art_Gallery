@@ -12,10 +12,6 @@ class Artwork(models.Model):
 
         return self.title
 
-class Create(models.Model):
-    artwork_id=models.Foreignkey(Artwork,on_delete=models.CASECADE)
-    email = models.Foreignkey(User, on_delete=models.CASECADE)
-class Meta:
-    unique_together={{'artwork_id','email'},}
+
 
 
