@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0a83731b-a58d-487b-94b9-0510c3d4b290" name="Default Changelist" comment="" />
+=======
+<<<<<<< Updated upstream
+    <list default="true" id="38873e78-9118-45d1-abe2-9e749157b755" name="Default Changelist" comment="" />
+=======
+    <list default="true" id="73a5be60-a83a-40e6-b369-bb8beb40f0bc" name="Default Changelist" comment="" />
+>>>>>>> Stashed changes
+>>>>>>> d4b0bb44f11f06d0855616743ecfcb34762a0a62
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +18,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="JupyterTrust" id="f52571b1-5288-419a-b389-a889f6225cdf" />
   <component name="ProjectId" id="1heDz2YNsCAOoFCQYY13WeiUeNq" />
+=======
+<<<<<<< Updated upstream
+  <component name="JupyterTrust" id="1770d9ca-54de-4c63-b846-6ad1134db43c" />
+  <component name="ProjectId" id="1he55ffY0qfG5XugJCJXe26fXHY" />
+>>>>>>> d4b0bb44f11f06d0855616743ecfcb34762a0a62
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -21,6 +35,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+=======
+  <component name="JupyterTrust" id="d0b567d4-497d-47b4-8183-c6e24b423282" />
+>>>>>>> Stashed changes
   <component name="RunManager">
     <configuration name="Online_Art_Gallery" type="Python.DjangoServer" factoryName="Django server">
       <module name="Online_Art_Gallery" />
@@ -46,6 +63,7 @@
       <method v="2" />
     </configuration>
   </component>
+<<<<<<< Updated upstream
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,12 +71,29 @@
       <created>1600362923349</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
+<<<<<<< HEAD
       <updated>1600362923349</updated>
       <workItem from="1600362924853" duration="741000" />
+=======
+      <updated>1600358541999</updated>
+      <workItem from="1600358550281" duration="2040000" />
+      <workItem from="1600448662194" duration="1354000" />
+      <workItem from="1600496165222" duration="2196000" />
+>>>>>>> d4b0bb44f11f06d0855616743ecfcb34762a0a62
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+=======
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="418" y="0" width="578" height="824" key="find.popup" timestamp="1600362247144">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="418" y="0" width="578" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1600362247144" />
+>>>>>>> Stashed changes
   </component>
 </project>

@@ -14,7 +14,11 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.8" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.8 (Online_Art_Gallery)" jdkType="Python SDK" />
+>>>>>>> d4b0bb44f11f06d0855616743ecfcb34762a0a62
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
