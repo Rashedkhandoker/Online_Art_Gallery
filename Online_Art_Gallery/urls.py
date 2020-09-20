@@ -22,10 +22,16 @@ from Blog import views as Blog_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AddUser/', ProfileView.showUser), #User Show er jonno
+<<<<<<< Updated upstream
     path('InsertUsers/', ProfileView.insertUser), #User insert er table dekhabe
     path('ShowArtwork/',Artworkview. showArtwork),
     path('insertArtwork/',Artworkview.insertArtwork),
     path('showBlogs/', Blog_views.showBlog),
     path('InsertBlogs/', Blog_views.insertBlog)
 
+=======
+    path('InsertUsers/', ProfileView.insertUser),#User insert er table dekhabe
+    path('Exhibition/',EventView.showevent),
+    path('Competition/',EventView.showcompetition)
+>>>>>>> Stashed changes
 ]
