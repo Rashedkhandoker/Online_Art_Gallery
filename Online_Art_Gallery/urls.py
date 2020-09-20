@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('AddUser/', ProfileView.showUser), #User Show er jonno
     path('InsertUsers/', ProfileView.insertUser),#User insert er table dekhabe
-    path('Showevent/',EventView.showevent)
+    path('Showevent/',EventView.showevent),
+    path('Showcompetition/',EventView.showcompetition)
 ]

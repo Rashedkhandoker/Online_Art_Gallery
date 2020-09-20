@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Competition</title>
+</head>
+<body>
+<h2>Display Competition list</h2> <br>
+{% for comp in all_competition %}
+    <p>
+        Competition_id : {{ comp.com_id }}<br>
+        Competition_date : {{ comp.date }}<br>
+        Competition_time : {{ comp.time }}<br>
+
+    </p>
+{% endfor %}
+</body>
+</html>
