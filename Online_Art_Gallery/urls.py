@@ -17,12 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from Profile import views as ProfileView
 from Artwork  import views as Artworkview
+from Blog import views as Blog_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AddUser/', ProfileView.showUser), #User Show er jonno
     path('InsertUsers/', ProfileView.insertUser), #User insert er table dekhabe
     path('ShowArtwork/',Artworkview. showArtwork),
-    path('insertArtwork/',Artworkview.insertArtwork)
+    path('insertArtwork/',Artworkview.insertArtwork),
+    path('showBlogs/', Blog_views.showBlog),
+    path('InsertBlogs/', Blog_views.insertBlog)
 
 ]

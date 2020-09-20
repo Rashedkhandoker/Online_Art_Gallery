@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+This is the blog list
+{% for b in blogs %}
+    <p>
+        Blog_title : {{ b.title }}<br>
+        Bloggers_name : {{ b.bloggers_name }}<br>
+        Blog : {{ b.blog }}<br>
+    </p>
+{% endfor %}
+</body>
+</html>

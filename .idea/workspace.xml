@@ -11,13 +11,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="d0b567d4-497d-47b4-8183-c6e24b423282" />
+  <component name="JupyterTrust" id="f52571b1-5288-419a-b389-a889f6225cdf" />
   <component name="ProjectId" id="1heAM1DC6vNKPVzAaIOKC3CWLno" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -28,6 +29,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Online_Art_Gallery" type="Python.DjangoServer" factoryName="Django server">
@@ -65,6 +67,7 @@
       <workItem from="1600361220354" duration="6196000" />
       <workItem from="1600442784885" duration="3750000" />
       <workItem from="1600580348602" duration="4093000" />
+      <workItem from="1600617359381" duration="812000" />
     </task>
     <servers />
   </component>

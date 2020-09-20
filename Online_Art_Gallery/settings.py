@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'Artwork.apps.ArtworkConfig',
     'Profile.apps.ProfileConfig',
     'Event.apps.EventConfig',
-
+    'Blog.apps.BlogConfig'
 
 
 ]
