@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Artwork</title>
+</head>
+<body>
+<h2>Submit the artwork here</h2>
+ <form method="POST">
+
+     {% csrf_token %}
+
+     {{ form.as_p }}
+
+     <input type="submit">
+
+ </form>
+
+</body>
+</html>
