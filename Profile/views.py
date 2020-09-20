@@ -7,10 +7,10 @@ def showUser(request):
     users = User.objects.all()
 
     context ={
-        'all_users' : users
+        'all_users': users
     }
 
-    return render(request,'Profile/ShowUser.html',context)
+    return render(request, 'Profile/ShowUser.html', context)
 
 def insertUser(request):
     form = Userform()
