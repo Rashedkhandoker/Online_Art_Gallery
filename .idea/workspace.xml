@@ -10,6 +10,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Script" />
         <option value="HTML File" />
       </list>
     </option>
@@ -28,6 +29,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Online_Art_Gallery" type="Python.DjangoServer" factoryName="Django server">
@@ -64,6 +71,9 @@
       <updated>1600361140869</updated>
       <workItem from="1600361220354" duration="6196000" />
       <workItem from="1600442784885" duration="3750000" />
+      <workItem from="1600609834683" duration="999000" />
+      <workItem from="1600610983227" duration="2316000" />
+      <workItem from="1600613435925" duration="3326000" />
     </task>
     <servers />
   </component>
@@ -75,5 +85,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1600366214986" />
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1600597816506">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1600597816506" />
   </component>
 </project>

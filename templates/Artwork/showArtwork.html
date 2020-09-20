@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Artworks </title>
+</head>
+<body>
+
+<h2>DISPLAY ARTWORKS HERE</h2>
+
+{% for artwork in all_artwork %}
+    <p>
+    Artwork title:{{ artwork.title }}<br>
+    Status:{{ artwork.status }}<br>
+    Art medium:{{ artwork.medium }}<br>
+    Category:{{ artwork.category }}<br>
+
+
+    </p>
+{% endfor %}
+
+
+
+</body>
+</html>
