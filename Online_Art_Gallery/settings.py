@@ -38,10 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Artwork.apps.ArtworkConfig',
-    'Profile.apps.ProfileConfig',
-    'Event.apps.EventConfig',
-
-
+    'Profile.apps.ProfileConfig'
 
 ]
 
