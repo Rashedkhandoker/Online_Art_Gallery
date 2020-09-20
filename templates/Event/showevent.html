@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exhibition</title>
+</head>
+<body>
+<h2>Display exhibition list</h2> <br>
+{% for exh in all_exhibition %}
+    <p>
+        Exhibition_id : {{ exh.exh_id }}<br>
+        Exhibition_date : {{ exh.date }}<br>
+        Exhibition_time : {{ exh.time }}<br>
+
+    </p>
+{% endfor %}
+
+</body>
+</html>

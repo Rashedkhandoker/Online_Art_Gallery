@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Profile import views as ProfileView
+from Event import views as EventView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AddUser/', ProfileView.showUser), #User Show er jonno
-    path('InsertUsers/', ProfileView.insertUser) #User insert er table dekhabe
-
+    path('InsertUsers/', ProfileView.insertUser),#User insert er table dekhabe
+    path('Showevent/',EventView.showevent)
 ]
