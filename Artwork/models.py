@@ -9,7 +9,7 @@ class Artwork(models.Model):
     medium = models.CharField(max_length=100,default="")
     category = models.CharField(max_length=100,default="")
 
-    email=models.ForeignKey(User,on_delete=models.CASCADE)
+    email=models.ForeignKey(User,on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
         return self.title
