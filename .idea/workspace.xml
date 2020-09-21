@@ -30,6 +30,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Online_Art_Gallery" type="Python.DjangoServer" factoryName="Django server">
@@ -68,6 +70,7 @@
       <workItem from="1600442784885" duration="3750000" />
       <workItem from="1600580348602" duration="4093000" />
       <workItem from="1600617359381" duration="812000" />
+      <workItem from="1600673806179" duration="1257000" />
     </task>
     <servers />
   </component>
