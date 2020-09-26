@@ -23,7 +23,7 @@ from Event import views as EventView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('AddUser/', ProfileView.showUser), #User Show er jonno
-
+    path('signup/', ProfileView.registration),
     path('InsertUsers/', ProfileView.insertUser), #User insert er table dekhabe
     path('ShowArtwork/',Artworkview. showArtwork),
     path('insertArtwork/',Artworkview.insertArtwork),
