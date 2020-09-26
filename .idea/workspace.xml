@@ -10,15 +10,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JupyterTrust" id="f52571b1-5288-419a-b389-a889f6225cdf" />
+  <component name="JupyterTrust" id="d0b567d4-497d-47b4-8183-c6e24b423282" />
   <component name="ProjectId" id="1heAM1DC6vNKPVzAaIOKC3CWLno" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -29,7 +29,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Python/pythonProject/ProfileApp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -76,9 +76,15 @@
       <workItem from="1600673806179" duration="1648000" />
       <workItem from="1600678424930" duration="1903000" />
       <workItem from="1600682340639" duration="239000" />
+<<<<<<< HEAD
       <workItem from="1600686337605" duration="655000" />
       <workItem from="1600966396854" duration="1239000" />
       <workItem from="1601131294275" duration="608000" />
+=======
+      <workItem from="1600683868675" duration="2137000" />
+      <workItem from="1601097866808" duration="1002000" />
+      <workItem from="1601125157820" duration="3790000" />
+>>>>>>> 78881250e8a0ddbf170de57a097d1ef4d6641a3a
     </task>
     <servers />
   </component>
@@ -90,5 +96,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="444" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1600366214986" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1601132899053">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601132899053" />
   </component>
 </project>
