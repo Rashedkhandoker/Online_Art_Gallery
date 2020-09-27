@@ -7,7 +7,11 @@ class Profile(models.Model):
     Full_name = models.CharField(max_length=100, unique=True)
     email = models.EmailField(max_length=100)
     contact_no = models.CharField(max_length=100, blank=True)
+<<<<<<< Updated upstream
     Profile_picture =models.ImageField(upload_to='images/pro_pic/',blank=True)
+=======
+    #Profile_picture =models.ImageField(upload_to='images/pro_pic/',blank=True)
+>>>>>>> Stashed changes
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
