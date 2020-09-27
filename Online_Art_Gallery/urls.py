@@ -25,16 +25,16 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('AddUser/', ProfileView.showUser,name='AddUser'), #User Show er jonno
+    path('CreateProfile/', ProfileView.createprofile,name='CreateProfile'),
+    path('ShowProfile/',ProfileView.showProfile,name='ShowProfile'),
     path('signup/', ProfileView.registration,name='signup'),
     #path('InsertUsers/', ProfileView.insertUser), #User insert er table dekhabe
     path('ShowArtwork/',Artworkview. showArtwork,name='ShowArtwork'),
     path('InsertArtwork/',Artworkview.insertArtwork,name='InsertArtwork'),
     path('ShowBlogs/', Blog_views.showBlog,name='ShowBlogs'),
     path('InsertBlogs/', Blog_views.insertBlog,name='InsertBlog'),
-    path('InsertUsers/', ProfileView.insertUser,name='InsertUsers'),#User insert er table dekhabe
     path('Exhibition/',EventView.showevent,name='Exhibition'),
     path('Competition/',EventView.showcompetition,name='Competition'),
-    path('accounts/',include('django.contrib.auth.urls'))
+    path('accounts/',include('django.contrib.auth.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
