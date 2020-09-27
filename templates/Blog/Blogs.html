@@ -10,6 +10,7 @@ This is the blog list
     <h4>Blog_title : {{ b.title }}</h4><br>
         Bloggers_name : {{ b.bloggers_name }}<br>
         Blog : {{ b.blog }}<br>
+        <img src="{{ b.image.url }}" width="250" height="250"> <br>
     </p>
 {% endfor %}
 {% endblock content %}
