@@ -3,7 +3,9 @@ from .models import User
 from .forms import Userform
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages  # we can use all messages from 'messages' framework
-#Register USer
+
+
+# Register USer
 def registration(request):
     user_form = UserCreationForm()
     if request.method == "POST":
@@ -20,14 +22,14 @@ def registration(request):
 
 
 def showUser(request):
-
     users = User.objects.all()
 
-    context ={
+    context = {
         'all_users': users
     }
 
     return render(request, 'Profile/ShowUser.html', context)
+
 
 def insertUser(request):
     form = Userform()

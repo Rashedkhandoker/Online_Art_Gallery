@@ -10,10 +10,13 @@
 
 {% for artwork in all_artwork %}
     <p>
-    Artwork title:{{ artwork.title }}<br>
+    <h2>Artwork :  {{ artwork.id }} </h2>
+    <h2>Artwork title:{{ artwork.title }}</h2><br>
     Status:{{ artwork.status }}<br>
     Art medium:{{ artwork.medium }}<br>
     Category:{{ artwork.category }}<br>
+     <img src="{{ artwork.art.url }}" width="250" height="250"> <br>
+      <h4> Description:{{ artwork.art_description }}</h4> <br>
 
 
     </p>
