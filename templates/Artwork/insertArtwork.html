@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Submit Artwork</title>
-</head>
-<body>
+{% extends 'Base.html' %}
+
+{% block content %}
+
 <h2>Submit the artwork here</h2>
- <form method="POST",enctype="multipart/form-data">
+    {{  message }}
+ <form method="POST" enctype="multipart/form-data">
 
      {% csrf_token %}
 
@@ -15,6 +13,5 @@
      <input type="submit">
 
  </form>
+{% endblock content %}
 
-</body>
-</html>

@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
-</head>
-<body>
+{% extends 'Base.html' %}
+
+{% block content %}
  <h2>Create your Profile</h2>
  {{  message }}
- <form method="POST",enctype="multipart/form-data">
+ <form method="POST" enctype="multipart/form-data">
      {% csrf_token %}
      {{ form.as_p }}
      <input type="submit">
+ </form>
 
-</body>
-</html>
+{% endblock content %}

@@ -1,10 +1,42 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> </title>
+    <title>Project</title>
 </head>
 <body>
- This is our project
+This is the base template
+
+<br>
+
+<a href="{% url 'Homepage' %}">Home Page</a><br>
+<a href="{% url 'InsertArtwork' %}">Insert Artwork</a><br>
+<a href="{% url 'ShowArtwork' %}">Artworks</a><br>
+<a href="{% url 'InsertBlogs' %}">Insert Blog</a><br>
+<a href="{% url 'ShowBlogs' %}">Blogs</a><br>
+<a href="{% url 'Exhibition' %}">Exhibition</a><br>
+<a href="{% url 'Competition' %}">Competition</a><br>
+<a href="{% url 'ShowProfile' %}">Profile</a><br>
+<a href="{% url 'CreateProfile' %}">create profile</a><br>
+
+
+{% if user.is_authenticated %}
+    <h3>{{ user.username }}</h3>
+    <a href="{% url 'logout' %}">Logout</a><br>
+{% else %}
+    <h3> Stranger!</h3>
+    <a href="{% url 'signup' %}">Sign Up</a><br>
+    <a href="{% url 'login' %}">Login</a><br>
+{% endif %}
+
+{% block content %}
+
+{% endblock content %}
+
+
+
+
 </body>
 </html>

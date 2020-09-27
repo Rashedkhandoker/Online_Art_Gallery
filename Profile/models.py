@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
-    Full_name = models.CharField(max_length=100, unique=True)
+    Full_name = models.CharField(max_length=100,default="")
     email = models.EmailField(max_length=100)
-    contact_no = models.CharField(max_length=100, blank=True)
+    contact_no = models.CharField(max_length=100, default="")
     Profile_picture =models.ImageField(upload_to='images/pro_pic/',blank=True)
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 

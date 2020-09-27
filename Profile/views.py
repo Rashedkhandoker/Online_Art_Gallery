@@ -4,6 +4,10 @@ from .forms import Profileform
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages  # we can use all messages from 'messages' framework
 from django.contrib.auth.decorators import login_required
+
+def showHome(request):
+    return render(request,'Homepage/ShowHome')
+
 #Register USer
 
 def registration(request):
@@ -25,14 +29,17 @@ def registration(request):
 @login_required
 def showProfile(request):
 
-    profile = Profile.objects.all()
+    try:
+        profile = Profile.objects.get(user=request.user)
+    except Profile.DoesNotExist:
+        profile="profile dose not exist"
 
     context ={
-        'Profile_list': profile
+        'profile': profile
 
     }
 
-    return render(request, 'Profile/ShowProfile.html', context)
+    return render(request, 'Profile/ShowProfile', context)
 
 
 

@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>signUp</title>
-</head>
-<body>
+{% extends 'Base.html' %}
+
+{% block content %}
+
 <h2>Create your account here</h2>
 <form method="POST">
     {% csrf_token %}
@@ -13,5 +10,4 @@
 
 </form>
 
-</body>
-</html>
+{% endblock content %}

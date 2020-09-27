@@ -11,9 +11,9 @@ class Artwork(models.Model):
     medium = models.CharField(max_length=100, default="")
     category = models.CharField(max_length=100, default="")
     art_description = models.TextField(max_length=100, null=True)
-    art = models.ImageField(upload_to='images/art/', blank=False)
+    art = models.ImageField(upload_to='images/art/')
 
-    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
 
     def __str__(self):
         return self.title

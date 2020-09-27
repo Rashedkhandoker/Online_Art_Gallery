@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'Base.html' %}
+
+{% load static %}
+
+{% block content %}
+
 This is the blog list
 {% for b in blogs %}
     <p>
@@ -13,5 +12,5 @@ This is the blog list
         Blog : {{ b.blog }}<br>
     </p>
 {% endfor %}
-</body>
-</html>
+{% endblock content %}
+
