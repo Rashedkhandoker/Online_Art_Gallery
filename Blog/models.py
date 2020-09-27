@@ -7,10 +7,8 @@ from Profile.models import User
 class Blog(models.Model):
     title = models.CharField(max_length=100, default="")
     bloggers_name = models.CharField(max_length=100, default="")
-    #user = models.ForeignKey(User, on_delete=models.CASCADE)
+    blog = models.TextField(max_length=1000, default="")
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     def __str__(self):
         return self.title
 
-class Post(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    blog_id = models.ForeignKey(Blog, on_delete=models.CASCADE)
