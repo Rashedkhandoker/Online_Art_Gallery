@@ -6,7 +6,7 @@ from django.contrib import messages  # we can use all messages from 'messages' f
 from django.contrib.auth.decorators import login_required
 
 def showHome(request):
-    return render(request,'Homepage/ShowHome')
+    return render(request,'Homepage/ShowHome.html')
 
 #Register USer
 
@@ -39,7 +39,7 @@ def showProfile(request):
 
     }
 
-    return render(request, 'Profile/ShowProfile', context)
+    return render(request, 'Profile/ShowProfile.html', context)
 
 
 

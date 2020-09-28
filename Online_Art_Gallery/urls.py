@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Homepage/',ProfileView.showHome,name='Homepage'),
     path('CreateProfile/', ProfileView.createprofile,name='CreateProfile'),
-    path('ShowProfile/',ProfileView.showProfile,name='ShowProfile'),
+    path('showprofile/',ProfileView.showProfile,name='ShowProfile'),
     path('signup/', ProfileView.registration,name='signup'),
     path('ShowArtwork/',Artworkview. showArtwork,name='ShowArtwork'),
     path('InsertArtwork/',Artworkview.insertArtwork,name='InsertArtwork'),

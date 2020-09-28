@@ -21,5 +21,5 @@ class Artwork(models.Model):
 
 class Arrange(models.Model):
     artwork = models.ForeignKey(Artwork, on_delete=models.CASCADE)
-    exhibition = models.ForeignKey(Exhibition, on_delete=models.SET_NULL, null=True)
-    competition = models.ForeignKey(Competition, on_delete=models.SET_NULL, null=True)
+    exhibition = models.ForeignKey(Exhibition, on_delete=models.SET_NULL, null=True, blank=True)
+    competition = models.ForeignKey(Competition, on_delete=models.SET_NULL, null=True, blank=True)
