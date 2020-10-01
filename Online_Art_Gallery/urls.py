@@ -33,7 +33,6 @@ urlpatterns = [
     path('InsertArtwork/',Artworkview.insertArtwork,name='InsertArtwork'),
     path('ShowBlogs/', Blog_views.showBlog,name='ShowBlogs'),
     path('InsertBlogs/', Blog_views.insertBlog,name='InsertBlogs'),
-    path('Exhibition/',EventView.showevent,name='Exhibition'),
     path('Competition/',EventView.showcompetition,name='Competition'),
     path('accounts/',include('django.contrib.auth.urls')),
 
