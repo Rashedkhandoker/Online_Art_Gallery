@@ -7,7 +7,8 @@
 <h2>Display Competition list</h2> <br>
 {% for comp in all_competition %}
     <p>
-        Competition_id : {{ comp.com_id }}<br>
+       <h2>Competition_id : {{ comp.id }}</h2> <br>
+        Competition_topic: {{comp.title}}<br>
         Competition_date : {{ comp.date }}<br>
         Competition_time : {{ comp.time }}<br>
 
