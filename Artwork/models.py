@@ -1,6 +1,6 @@
 from django.db import models
 from Profile.models import User
-from Event.models import Exhibition, Competition
+
 from django.contrib.auth.models import User
 
 
@@ -13,13 +13,10 @@ class Artwork(models.Model):
     art_description = models.TextField(max_length=100, null=True)
     art = models.ImageField(upload_to='images/art/')
 
-    user = models.ForeignKey(User,on_delete=models.SET_NULL,null=True)
+    user = models.ForeignKey(User,on_delete=models.CASCADE, null=True,blank=True)
 
     def __str__(self):
         return self.title
 
 
-class Arrange(models.Model):
-    artwork = models.ForeignKey(Artwork, on_delete=models.CASCADE)
-    exhibition = models.ForeignKey(Exhibition, on_delete=models.SET_NULL, null=True, blank=True)
-    competition = models.ForeignKey(Competition, on_delete=models.SET_NULL, null=True, blank=True)
+
