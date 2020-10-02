@@ -42,10 +42,13 @@ INSTALLED_APPS = [
     'Artwork.apps.ArtworkConfig',
     'Profile.apps.ProfileConfig',
     'Event.apps.EventConfig',
-    'Blog.apps.BlogConfig'
+    'Blog.apps.BlogConfig',
+    'crispy_forms'
 
 
 ]
+
+CRISPY_TEMPLATE_PACK = 'boostrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
