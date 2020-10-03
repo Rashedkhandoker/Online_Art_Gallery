@@ -35,6 +35,8 @@ urlpatterns = [
     path('ShowBlogs/', Blog_views.showBlog,name='ShowBlogs'),
     path('InsertBlogs/', Blog_views.insertBlog,name='InsertBlogs'),
     path('Competition/',EventView.showcompetition,name='Competition'),
+    path('Competition/<int:comp_id>', EventView.showDetails, name='detail_view'),
+    path('SubmitCompetition/', EventView.submitart, name='SubmitCompetition'),
     path('accounts/',include('django.contrib.auth.urls'))
 
 

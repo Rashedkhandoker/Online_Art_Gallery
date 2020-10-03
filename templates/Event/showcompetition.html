@@ -4,14 +4,35 @@
 
 {% block content %}
 
-<h2>Display Competition list</h2> <br>
-{% for comp in all_competition %}
-    <p>
-       <h2>Competition_id : {{ comp.id }}</h2> <br>
-        Competition_topic: {{comp.title}}<br>
-        Competition_date : {{ comp.date }}<br>
-        Competition_time : {{ comp.time }}<br>
+    <center><h2><i>Competition list</i></h2></center> <br>
 
-    </p>
-{% endfor %}
+    <p> <center><b>“Competition is always a good thing. It forces us to do our best.
+        A monopoly renders people complacent and satisfied with mediocrity.”  – Nancy Pearcy</b></center></p>
+
+   <div class="row row-cols-1 row-cols-md-3">
+
+       {% for comp in all_competition %}
+
+        <div class="col mb-4">
+          <div class="card h-100" >
+            <div class="card-body">
+              <h5 class="card-title">{{ comp.id }}</h5>
+              <p class="card-text">
+                  <h3>{{ comp.title }}</h3>
+
+              </p>
+
+                {# http://127.0.0.1:8000/products/    #}
+                <a href="{{comp.id }}">
+                    {# http://127.0.0.1:8000/products/product_id    #}
+                    <button type="button" class="btn btn-outline-primary">Details</button>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+
+    </div>
 {% endblock content %}

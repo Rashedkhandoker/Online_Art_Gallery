@@ -57,7 +57,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{% url 'Competition' %}">Competitions</a>
-          <a class="dropdown-item" href="#">Submission</a>
+          <a class="dropdown-item" href="{% url 'SubmitCompetition' %}">Submission</a>
 
         </div>
       </li>
@@ -92,6 +92,7 @@
 <a href="{% url 'InsertBlogs' %}">Insert Blog</a><br>
 <a href="{% url 'ShowBlogs' %}">Blogs</a><br>
 <a href="{% url 'Competition' %}">Competition</a><br>
+<a href="{% url 'SubmitCompetition' %}">Submission</a><br>
 <a href="{% url 'ShowProfile' %}">Profile</a><br>
 <a href="{% url 'CreateProfile' %}">create profile</a><br>
 
