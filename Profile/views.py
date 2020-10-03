@@ -29,13 +29,15 @@ def registration(request):
 @login_required
 def showProfile(request):
 
-    try:
-        profile = Profile.objects.get(user=request.user)
-    except Profile.DoesNotExist:
-        profile="profile dose not exist"
+    profile = Profile.objects.filter(user=request.user)
+
+    if len(profile)!= 0:
+        p = profile[0]
+    else:
+        p= "Not"
 
     context ={
-        'profile': profile
+        'profile': p
 
     }
 
