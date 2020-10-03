@@ -1,17 +1,18 @@
 {% extends 'Base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
-<h2>Submit the artwork here</h2>
+<h2>Submit the artwork here</h2><br>
     {{  message }}
+
  <form method="POST" enctype="multipart/form-data">
 
      {% csrf_token %}
 
-     {{ form.as_p }}
+     {{ form | crispy }}
 
      <input type="submit">
 
  </form>
 {% endblock content %}
-

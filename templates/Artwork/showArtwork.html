@@ -1,22 +1,72 @@
+
 {% extends 'Base.html' %}
 
 {% load static %}
 
 {% block content %}
 
-{% for artwork in all_artwork %}
-    <p>
-       <h2>Artwork :  {{ artwork.id }} </h2>
-       <h2>Artwork title:{{ artwork.title }}</h2><br>
-       Status:{{ artwork.status }}<br>
-       Art medium:{{ artwork.medium }}<br>
-       Category:{{ artwork.category }}<br>
-       <img src="{{ artwork.art.url }}" width="250" height="250"> <br>
-       <h4> Description:{{ artwork.art_description }}</h4> <br>
 
 
-    </p>
-{% endfor %}
+
+   <center> <h2>ARTWORK</h2></center><br>
+    <img src="https://osnatfineart.com/paintings/images/3293-modern-landscape-painting.jpg" hight="1000" width="3000" class="img-fluid" alt="Responsive image"><br>
+    <br>
+    <br>
+
+
+
+    <center><h2>What is Artwork?</h2></center><br>
+    <p><h6> <i>Art is a highly diverse range of human activities engaged in creating visual,
+            auditory, or performed artifacts— artworks—that express the author’s imaginative or technical skill,
+            and are intended to be appreciated for their beauty or emotional power. Art may be characterized in
+            terms of mimesis (its representation of reality), expression, communication of emotion, or other
+            qualities. Though the definition of what constitutes art is disputed and has changed over time,
+            general descriptions center on the idea of imaginative or technical skill stemming from human agency
+            and creation.</h6></p></i>
+
+
+
+    <p><h6>
+       <i> Art is often examined through the interaction of the principles and elements of art.
+        The principles of art include movement, unity, harmony, variety, balance, contrast,
+        proportion and pattern. The elements include texture, form, space, shape, color, value and line.
+        The various interactions between the elements and principles of art help artists to organize
+        sensorially pleasing works of art while also giving viewers a framework within which to analyze and
+        discuss aesthetic ideas.</i>
+    </p></h6><br>
+    <br>
+    <br>
+   <h3> <i>ARTWORK GALLERY</i></h3><br>
+    <br>
+
+ <div class="row row-cols-1 row-cols-md-3">
+
+        {% for artwork in all_artwork %}
+
+
+        <div class="col mb-4">
+          <div class="card h-100" >
+            <img src="{{ artwork.art.url }}"class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ artwork.id }}</h5>
+              <p class="card-text">
+                  <h3>{{ artwork.title }}</h3>
+
+              </p>
+
+                {# http://127.0.0.1:8000/products/    #}
+                <a href="{{ artwork.id }}">
+                    {# http://127.0.0.1:8000/products/product_id    #}
+                    <button type="button" class="btn btn-outline-primary">Details</button>
+                </a>
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+
+    </div>
 {% endblock content %}
 
 

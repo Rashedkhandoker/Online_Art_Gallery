@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from Profile import views as ProfileView
-from Artwork  import views as Artworkview
+from Artwork import views as Artworkview
 from Blog import views as Blog_views
 from Event import views as EventView
 from django.conf import settings
@@ -30,11 +30,12 @@ urlpatterns = [
     path('showprofile/',ProfileView.showProfile,name='ShowProfile'),
     path('signup/', ProfileView.registration,name='signup'),
     path('ShowArtwork/',Artworkview. showArtwork,name='ShowArtwork'),
+    path('ShowArtwork/<int:artwork_id>', Artworkview.showDetails, name='detail_view'),
     path('InsertArtwork/',Artworkview.insertArtwork,name='InsertArtwork'),
     path('ShowBlogs/', Blog_views.showBlog,name='ShowBlogs'),
     path('InsertBlogs/', Blog_views.insertBlog,name='InsertBlogs'),
     path('Competition/',EventView.showcompetition,name='Competition'),
-    path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/',include('django.contrib.auth.urls'))
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
