@@ -4,14 +4,31 @@
 
 {% block content %}
 
-This is the blog list
-{% for b in blogs %}
-    <p>
-    <h4>Blog_title : {{ b.title }}</h4><br>
-        Bloggers_name : {{ b.bloggers_name }}<br>
-        Blog : {{ b.blog }}<br>
-        <img src="{{ b.image.url }}" width="250" height="250"> <br>
-    </p>
-{% endfor %}
-{% endblock content %}
+<div class="row row-cols-1 row-cols-md-3">
 
+        {% for b in blogs %}
+
+                <div class="col mb-4">
+                  <div class="card h-100" >
+                    <img src="{{ b.image.url }}"class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ b.id }}</h5>
+                      <p class="card-text">
+                          <h3>{{ b.title }}</h3>
+
+                      </p>
+
+                        {# http://127.0.0.1:8000/products/    #}
+                        <a href="{{ b.id }}">
+                            {# http://127.0.0.1:8000/products/product_id    #}
+                            <button type="button" class="btn btn-outline-primary">Details</button>
+                        </a>
+                    </div>
+                  </div>
+                </div>
+
+        {% endfor %}
+
+
+</div>
+{% endblock content %}

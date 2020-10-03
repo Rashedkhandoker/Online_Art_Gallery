@@ -33,6 +33,7 @@ urlpatterns = [
     path('ShowArtwork/<int:artwork_id>', Artworkview.showDetails, name='detail_view'),
     path('InsertArtwork/',Artworkview.insertArtwork,name='InsertArtwork'),
     path('ShowBlogs/', Blog_views.showBlog,name='ShowBlogs'),
+    path('ShowBlogs/<int:b_id>', Blog_views.showDetails, name='detail_view'),
     path('InsertBlogs/', Blog_views.insertBlog,name='InsertBlogs'),
     path('Competition/',EventView.showcompetition,name='Competition'),
     path('Competition/<int:comp_id>', EventView.showDetails, name='detail_view'),
