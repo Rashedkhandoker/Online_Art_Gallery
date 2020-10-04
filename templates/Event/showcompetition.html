@@ -6,15 +6,22 @@
 
     <center><h2><i>Competition list</i></h2></center> <br>
 
-    <p> <center><b>“Competition is always a good thing. It forces us to do our best.
-        A monopoly renders people complacent and satisfied with mediocrity.”  – Nancy Pearcy</b></center></p>
 
+
+    <p> <center><b>“Competition is always a good thing. It forces us to do our best.
+        A monopoly renders people complacent and satisfied with mediocrity.”  – Nancy Pearcy
+        </b></center></p> <br>
+
+     <center><img src="https://www.liveabout.com/thmb/7fRT50kS9LkKarfNBHwgqM8d_MM=/1001x858/filters:no_upscale():max_bytes(150000):strip_icc()/sketchbook2-957e27d6e4d941889ca710898994f27c.jpg" hight="500" width="1000" class="img-fluid" alt="Responsive image"></center>
+    <br>
+    <br>
    <div class="row row-cols-1 row-cols-md-3">
 
        {% for comp in all_competition %}
 
         <div class="col mb-4">
           <div class="card h-100" >
+               <img src="{{ comp.thumbnail.url }}"class="card-img-top" alt="..."width="50" height="400">
             <div class="card-body">
               <h5 class="card-title">{{ comp.id }}</h5>
               <p class="card-text">

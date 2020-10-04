@@ -1,5 +1,5 @@
 {% extends 'Base.html' %}
-{% load crispy_forms_tags %}
+
 
 {% block content %}
 
@@ -10,9 +10,9 @@
 
      {% csrf_token %}
 
-     {{ form | crispy }}
+     {{ form.as_p }}
 
-     <input type="submit">
+    <a href="http://127.0.0.1:8000/ShowSubmission/" class="btn btn-primary">Submit</a>
 
  </form>
 {% endblock content %}
