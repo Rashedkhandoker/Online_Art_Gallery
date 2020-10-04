@@ -7,6 +7,9 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def showBlog(request):
     blogs=Blog.objects.all()
+    if request.method == 'POST':
+        blogs = Blog.objects.filter(title__icontains=request.POST['search'])
+
     context={
         'blogs':blogs
     }
