@@ -1,4 +1,8 @@
-
+<style>
+h2 {
+  text-shadow: 2px 2px 5px blue;
+}
+</style>
 {% extends 'Base.html' %}
 
 {% load static %}
@@ -8,14 +12,14 @@
 
 
 
-   <center> <h2>ARTWORK</h2></center><br>
-    <img src="https://osnatfineart.com/paintings/images/3293-modern-landscape-painting.jpg" hight="1000" width="3000" class="img-fluid" alt="Responsive image"><br>
+   <center> <h2 style="color: black"> ARTWORK</h2></center><br>
+    <center><img src="https://static.bimago.com/mediacache/catalog/product/cache/8/1/49318/image/650x440/e8560bf2b26ce39d939f0bddbe704f65/49318_1.jpg" hight="100" width="1100" class="img-fluid" alt="Responsive image"></center><br><br>
     <br>
     <br>
 
 
 
-    <center><h2>What is Artwork?</h2></center><br>
+    <center><h2 style="color: black">What is Artwork?</h2></center><br>
     <p><h6> <i>Art is a highly diverse range of human activities engaged in creating visual,
             auditory, or performed artifacts— artworks—that express the author’s imaginative or technical skill,
             and are intended to be appreciated for their beauty or emotional power. Art may be characterized in
@@ -36,7 +40,7 @@
     </p></h6><br>
     <br>
     <br>
-   <h3> <i>ARTWORK GALLERY</i></h3><br>
+   <i><h2 style="color: black">ARTWORK GALLERY</i></h2><br>
     <br>
 
  <div class="row row-cols-1 row-cols-md-3">
@@ -46,7 +50,7 @@
 
         <div class="col mb-4">
           <div class="card h-100" >
-            <img src="{{ artwork.art.url }}"class="card-img-top" alt="...">
+            <img src="{{ artwork.art.url }}"class="card-img-top" alt="..." height="220" width="100">
             <div class="card-body">
               <h5 class="card-title">{{ artwork.id }}</h5>
               <p class="card-text">
