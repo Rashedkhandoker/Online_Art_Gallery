@@ -48,3 +48,15 @@ def showDetails(request, comp_id):
 
     }
     return render(request, 'Event/show_event_details.html', context)
+
+
+
+
+@login_required()
+def showSubmission(request):
+
+    Artsubmission = SubmitCompetition.objects.all()
+    context ={
+        'all_submission': Artsubmission
+    }
+    return render(request,'Event/showsubmission.html', context)

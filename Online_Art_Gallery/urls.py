@@ -38,7 +38,9 @@ urlpatterns = [
     path('Competition/',EventView.showcompetition,name='Competition'),
     path('Competition/<int:comp_id>', EventView.showDetails, name='detail_view'),
     path('SubmitCompetition/', EventView.submitart, name='SubmitCompetition'),
+    path('ShowSubmission/', EventView.showSubmission, name='ShowSubmission'),
     path('accounts/',include('django.contrib.auth.urls'))
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

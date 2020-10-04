@@ -2,14 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-# Create your models here.
-
 
 class Competition(models.Model):
     title = models.CharField(max_length=100,default="")
     date = models.DateField(auto_now=True)
     time = models.TimeField(auto_now=True)
-
+    thumbnail = models.ImageField(upload_to='images/thumbnail/',blank=True)
     def __str__(self):
         return self.title
 

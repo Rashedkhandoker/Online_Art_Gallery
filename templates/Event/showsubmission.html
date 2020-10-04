@@ -1,0 +1,36 @@
+{% extends 'Base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <br>
+   <h3> <i>Submitted Art for Competition </i></h3><br>
+    <br>
+
+ <div class="row row-cols-1 row-cols-md-3">
+
+        {% for s in all_submission %}
+
+
+        <div class="col mb-4">
+          <div class="card h-100" >
+            <img src="{{ s.image.url }}"class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ s.id }}</h5>
+              <p class="card-text">
+                  <h3>{{ s.title }}</h3><br>
+                  <h3>{{ s.medium }}</h3><br>
+                  <h3>{{ s.category}}</h3><br>
+
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+{% endblock content %}
