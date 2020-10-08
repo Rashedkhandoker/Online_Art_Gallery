@@ -4,7 +4,7 @@ from .forms import BlogForm
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@login_required
+
 def showBlog(request):
     blogs=Blog.objects.all()
     if request.method == 'POST':

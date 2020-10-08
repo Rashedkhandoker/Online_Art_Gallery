@@ -7,6 +7,12 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def showArtwork(request):
     artwork = Artwork.objects.all()
+    
+    if request.method == 'POST':
+        title = Artwork.objects.filter(title__icontains=request.POST['search'])
+        category = Artwork.objects.filter(category__icontains=request.POST['search'])
+
+        artwork = title | category
 
     context = {
         'all_artwork': artwork
