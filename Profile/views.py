@@ -1,14 +1,16 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from .models import Profile
 from .forms import Profileform
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages  # we can use all messages from 'messages' framework
 from django.contrib.auth.decorators import login_required
 
-def showHome(request):
-    return render(request,'Homepage/ShowHome.html')
 
-#Register USer
+def showHome(request):
+    return render(request, 'Homepage/ShowHome.html')
+
+
+# Register USer
 
 def registration(request):
     user_form = UserCreationForm()
@@ -25,18 +27,16 @@ def registration(request):
     return render(request, 'Profile/registration.html', context)
 
 
-
 @login_required
 def showProfile(request):
-
     profile = Profile.objects.filter(user=request.user)
 
-    if len(profile)!= 0:
+    if len(profile) != 0:
         p = profile[0]
     else:
-        p= "Not"
+        p = "Not"
 
-    context ={
+    context = {
         'profile': p
 
     }
@@ -44,15 +44,13 @@ def showProfile(request):
     return render(request, 'Profile/ShowProfile.html', context)
 
 
-
 @login_required
 def createprofile(request):
     form = Profileform()
 
-
     message = ""
     if request.method == "POST":
-        form = Profileform(request.POST,request.FILES)
+        form = Profileform(request.POST, request.FILES)
         message = "Invalid input. Please try again later."
         if form.is_valid():
             profile = form.save(commit=False)
@@ -68,3 +66,4 @@ def createprofile(request):
         'message': message
     }
     return render(request, 'profile/CreateProfile.html', context)
+
