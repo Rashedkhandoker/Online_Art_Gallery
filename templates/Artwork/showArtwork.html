@@ -1,8 +1,4 @@
-<style>
-h2 {
-  text-shadow: 2px 2px 5px blue;
-}
-</style>
+
 {% extends 'Base.html' %}
 
 {% load static %}
@@ -10,10 +6,8 @@ h2 {
 {% block content %}
 
 
-
-
    <center> <h2 style="color: black"> ARTWORK</h2></center><br>
-    <center><img src="https://static.bimago.com/mediacache/catalog/product/cache/8/1/49318/image/650x440/e8560bf2b26ce39d939f0bddbe704f65/49318_1.jpg" hight="100" width="1100" class="img-fluid" alt="Responsive image"></center><br><br>
+    <center><img src="https://static.bimago.com/mediacache/catalog/product/cache/8/1/49318/image/650x440/e8560bf2b26ce39d939f0bddbe704f65/49318_1.jpg" hight="100" width="1200" class="img-fluid" alt="Responsive image"></center><br><br>
     <br>
     <br>
 
@@ -43,34 +37,29 @@ h2 {
    <i><h2 style="color: black">ARTWORK GALLERY</i></h2><br>
     <br>
 
- <div class="row row-cols-1 row-cols-md-3">
+<div class="card-columns">
 
-        {% for artwork in all_artwork %}
+    {% for artwork in all_artwork %}
+             <div class="card">
+                <img src="{{ artwork.art.url }}" class="card-img-top" alt="..." height="300 width="250">
+                <div class="card-body">
+                  <h5 class="card-title">{{ artwork.id }}</h5>
+                  <p class="card-text"> <h3>{{ artwork.title }}</h3></p>
 
-
-        <div class="col mb-4">
-          <div class="card h-100" >
-            <img src="{{ artwork.art.url }}"class="card-img-top" alt="..." height="220" width="100">
-            <div class="card-body">
-              <h5 class="card-title">{{ artwork.id }}</h5>
-              <p class="card-text">
-                  <h3>{{ artwork.title }}</h3>
-
-              </p>
-
-                {# http://127.0.0.1:8000/products/    #}
+                        {# http://127.0.0.1:8000/products/    #}
                 <a href="{{ artwork.id }}">
                     {# http://127.0.0.1:8000/products/product_id    #}
                     <button type="button" class="btn btn-outline-primary">Details</button>
                 </a>
-            </div>
-          </div>
+                    </div>
+      </div>
+
+
+
+    {% endfor %}
+
+
         </div>
-
-        {% endfor %}
-
-
-    </div>
 {% endblock content %}
 
 
