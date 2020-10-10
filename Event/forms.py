@@ -1,5 +1,5 @@
 from django import forms
-from .models import SubmitCompetition
+from .models import SubmitCompetition,Review
 
 
 class SubmitCompetitionForm(forms.ModelForm):
@@ -7,3 +7,7 @@ class SubmitCompetitionForm(forms.ModelForm):
         model = SubmitCompetition
         fields = ('competition','title','medium','category','image')
 
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ('rating', 'comment')

@@ -1,4 +1,4 @@
-{% extends 'Base.html' %}
+{% extends 'Base_event.html' %}
 
 {% load static %}
 
@@ -13,21 +13,45 @@
         {% for s in all_submission %}
 
 
-        <div class="col mb-4">
-          <div class="card h-100" >
-            <img src="{{ s.image.url }}"class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{ s.id }}</h5>
-              <p class="card-text">
-                  <h3>{{ s.title }}</h3><br>
-                  <h3>{{ s.medium }}</h3><br>
-                  <h3>{{ s.category}}</h3><br>
+            <div class="col mb-4">
+              <div class="card h-100" >
+                <img src="{{ s.image.url }}"class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ s.id }}</h5>
+                  <p class="card-text">
+                      <h3>{{ s.title }}</h3><br>
 
-              </p>
+                  </p>
 
+                    <a href="{{s.id }}">
+                    {# http://127.0.0.1:8000/products/product_id    #}
+                    <button type="button" class="btn btn-outline-primary">Details</button>
+                    </a>
+
+
+                    <div class="container">
+                      {% for review in search.reviews.all %}
+                        User: {{ review.user.username }}<br>
+                        Rating: {{ review.rating }} <br>
+                        Comment: {{ review.comment }} <br><br><br>
+                      {% endfor %}
+                    </div>
+
+                     <div class="container">
+                        {% if already_reviewed == False %}
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit">Review</button>
+                             </form>
+                        {% else %}
+                            <h2>You have already submitted a review</h2>
+                        {% endif %}
+                     </div>
+
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
         {% endfor %}
 

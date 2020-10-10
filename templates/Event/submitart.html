@@ -1,4 +1,4 @@
-{% extends 'Base.html' %}
+{% extends 'Base_event.html' %}
 
 
 {% block content %}
@@ -10,9 +10,9 @@
 
      {% csrf_token %}
 
-     {{ form.as_p }}
+     {{ form.as_p}}
 
-    <a href="http://127.0.0.1:8000/ShowSubmission/" class="btn btn-primary">Submit</a>
+     <input type="submit">
 
  </form>
 {% endblock content %}
