@@ -42,5 +42,7 @@ class SubmitCompetition(models.Model):
     user = models.ForeignKey(User,on_delete=models.CASCADE,null=True,blank=True)
     competition = models.ForeignKey(Competition, on_delete=models.CASCADE, null=True, blank=True)
 
+    reviews = models.ManyToManyField(Review)
+
     def __str__(self):
         return self.title
