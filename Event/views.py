@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
-from .models import Competition,SubmitCompetition
+from .models import Competition,SubmitCompetition,Review
 from .forms import SubmitCompetitionForm,ReviewForm
 from django.contrib.auth.decorators import login_required
 
@@ -9,8 +9,12 @@ from django.contrib.auth.decorators import login_required
 @login_required()
 def showcompetition(request):
     competition  = Competition.objects.all()
+
     if request.method == 'POST':
-        competition =Competition.objects.filter(title__icontains=request.POST['search'])
+        title = Competition.objects.filter(title__icontains=request.POST['search'])
+
+        competition = title
+
     context ={
         'all_competition': competition
     }
@@ -48,9 +52,10 @@ def showDetails(request, comp_id):
     context = {
         'search': searched_comp,
 
-
     }
     return render(request, 'Event/show_event_details.html', context)
+
+
 
 
 
@@ -60,31 +65,19 @@ def showSubmission(request):
 
     Artsubmission = SubmitCompetition.objects.all()
 
-    form = ReviewForm()
-
-    if request.method == "POST":
-        form = ReviewForm(request.POST)
-
-        if form.is_valid:
-            instance = form.save(commit=False)
-            instance.user = request.user
-            instance.save()
-
-            searched_product.reviews.add(instance)
-            searched_product.save()
     context ={
-        'all_submission': Artsubmission,
-        'form': form
+        'all_submission': Artsubmission
     }
     return render(request,'Event/showsubmission.html', context)
 
 
+
 @login_required
-def review_after_complete(request, art_id):
+def review_after_submit(request, s_id):
 
     already_reviewed = False
 
-    searched_product = get_object_or_404(Product, id=art_id)
+    searched_art = get_object_or_404(SubmitCompetition, id=s_id)
 
     user_list = searched_product.reviews.filter(user=request.user)
     print(user_list, len(user_list))
@@ -102,24 +95,45 @@ def review_after_complete(request, art_id):
             instance.user = request.user
             instance.save()
 
-            searched_product.reviews.add(instance)
-            searched_product.save()
+            searched_art.reviews.add(instance)
+            searched_art.save()
 
-            return redirect('my-orders')
+            return redirect('ShowSubmission')
 
     context = {
-        'search': searched_product,
+        'search': searched_art,
         'form': form,
         'already_reviewed': already_reviewed
     }
-    return render(request, 'ProductManagement/detail_product_view_review.html', context)
+    return render(request, 'Event/detail_event_review.html', context)
 
-def showArtDetails(request,s_id):
+
+
+
+def showDetails2(request, s_id):
 
     searched_s = get_object_or_404(SubmitCompetition, id=s_id)
+
+    form = ReviewForm()
+
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+
+        if form.is_valid:
+            instance = form.save(commit=False)
+            instance.user = request.user
+            instance.save()
+
+            searched_s.reviews.add(instance)
+            searched_s.save()
+
     context = {
         'search': searched_s,
-
-
+        'form': form
     }
+
+
     return render(request, 'Event/show_art_details.html', context)
+
+
+

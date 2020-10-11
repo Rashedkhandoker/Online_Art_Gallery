@@ -34,7 +34,7 @@ def showProfile(request):
     if len(profile) != 0:
         p = profile[0]
     else:
-        p = "Not"
+        p = "No Profile"
 
     context = {
         'profile': p
